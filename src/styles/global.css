@@ -1,0 +1,121 @@
+:root {
+  --bg-dark: #f1f5f9;
+  --bg-card: #ffffff;
+  --accent-primary: #2563eb;
+  --accent-secondary: #7c3aed;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --glass: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.08);
+  --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --max-width: 1200px;
+  --transition: all 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  background: var(--glass);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}

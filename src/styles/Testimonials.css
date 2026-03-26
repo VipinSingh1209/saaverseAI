@@ -1,0 +1,83 @@
+.testimonials {
+  background: white;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+}
+
+.quote-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 4rem;
+  color: var(--accent-primary);
+  opacity: 0.1;
+  font-family: serif;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+}
+
+.client-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.client-role {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
