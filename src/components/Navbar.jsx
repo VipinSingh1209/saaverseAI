@@ -26,7 +26,7 @@ const Navbar = () => {
           <li><a href="#contact">Contact</a></li>
         </ul>
         {/* <button className="btn btn-primary nav-cta">Get Started</button> */}
-        <button className="btn btn-primary nav-cta" onClick={() => window.open("https://crm.saasverse.ai/")}>
+        <button className="btn btn-primary nav-cta" onClick={() => window.open("https://crm.saasverse.ai/apps")}>
   Dashboard
 </button>
       </div>
